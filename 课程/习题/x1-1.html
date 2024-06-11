@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>1-1习题</title>
+</head>
+<body>
+    <!--navigationBar-->
+	<div style="background-color: floralwhiteh;text-align: center;">
+		<li style="display: inline-block;font-family: 微软雅黑;width: 350px;height: 40px;background-color: palegreen;border-radius: 5px;line-height: 45px;text-indent: 5px;color: seagreen;border: none;font-size: 20px;font-weight: 500;" ><a href="D:\源文件\首页.html" style="color: white;text-decoration: none;">首页</a></li>
+		<li style="display: inline-block;font-family: 微软雅黑;width: 350px;height: 40px;background-color: pink;border-radius: 5px;line-height: 45px;text-indent: 5px;color: pink;border: none;font-size: 20px;font-weight: 400;"><a href="D:\源文件\汉语\汉语.html" style="color: white;text-decoration: none;">汉语</a></li>
+		<li style="display: inline-block;font-family: 微软雅黑;width: 350px;height: 40px;background-color: skyblue;border-radius: 5px;line-height: 45px;text-indent: 5px;color: skyblue;border: none;font-size: 20px;font-weight: 400;"><a href="D:\源文件\课程\内容\课文.html" style="color: white;text-decoration: none;">课文</a></li>
+		<li style="display: inline-block;font-family: 微软雅黑;width: 350px;height: 40px;background-color: lightsalmon;border-radius: 5px;line-height: 45px;text-indent: 5px;color: orange;border: none;font-size: 20px;font-weight: 400;"><a href="D:\源文件\课程\习题\练习.html" style="color: white;text-decoration: none;">练习</a></li>
+		</div>
+		<hr style="color: white; width:0.625rem ;" />
+		<img   src="D:\源文件\课程\img\习题.jpg" alt="header_img " style="width:100%">
+
+	<!---Question 1-->
+	<div style='transform: scale(0.65); position: relative; top: -50px;'>
+		<h3>叫是什么意思</h3>
+		<p>选择一个答案 Choose 1 answer</p>
+		<hr />
+	  
+		<div id='block-11' style='padding: 10px;'>
+		  <label for='option-11' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='6/24' id='option-11' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			ask</label>
+		  <span id='result-11'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-12' style='padding: 10px;'>
+		  <label for='option-12' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='6' id='option-12' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			talk</label>
+		  <span id='result-12'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-13' style='padding: 10px;'>
+		  <label for='option-13' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='1/3' id='option-13' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			call</label>
+		  <span id='result-13'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-14' style='padding: 10px;'>
+		  <label for='option-14' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='1/6' id='option-14' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			name</label>
+		  <span id='result-14'></span>
+		</div>
+		<hr />
+		<button type='button' onclick='displayAnswer1()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>提交</button>
+	  </div>
+	  <a id='showanswer1'></a>
+	  <script>
+		//The function evaluates the answer and displays result
+		function displayAnswer1() {
+		  if (document.getElementById('option-11').checked) {
+			document.getElementById('block-11').style.border = '3px solid red'
+			document.getElementById('result-11').style.color = 'red'
+			document.getElementById('result-11').innerHTML = 'Incorrect!'
+			showCorrectAnswer1()
+		  }
+		  if (document.getElementById('option-12').checked) {
+			document.getElementById('block-12').style.border = '3px solid red'
+			document.getElementById('result-12').style.color = 'red'
+			document.getElementById('result-12').innerHTML = 'Incorrect!'
+			showCorrectAnswer1()
+		  }
+		  if (document.getElementById('option-13').checked) {
+			document.getElementById('block-13').style.border = '3px solid limegreen'
+			document.getElementById('result-13').style.color = 'limegreen'
+			document.getElementById('result-13').innerHTML = 'Correct!'
+		  }
+		  if (document.getElementById('option-14').checked) {
+			document.getElementById('block-14').style.border = '3px solid red'
+			document.getElementById('result-14').style.color = 'red'
+			document.getElementById('result-14').innerHTML = 'Incorrect!'
+			showCorrectAnswer1()
+		  }
+		}
+		// the functon displays the link to the correct answer
+		function showCorrectAnswer1() {
+		  let showAnswer1 = document.createElement('p')
+		  showAnswer1.innerHTML = '显示正确答案 Show Correct Answer'
+		  showAnswer1.style.position = 'relative'
+		  showAnswer1.style.top = '-120px'
+		  showAnswer1.style.fontSize = '0.75rem'
+		  document.getElementById('showanswer1').appendChild(showAnswer1)
+		  showAnswer1.addEventListener('click', () => {
+			document.getElementById('block-13').style.border = '3px solid limegreen'
+			document.getElementById('result-13').style.color = 'limegreen'
+			document.getElementById('result-13').innerHTML = 'Correct!'
+			document.getElementById('showanswer1').removeChild(showAnswer1)
+		  })
+		}
+	  </script>
+
+	<!--Question 2-->
+	<div style='transform: scale(0.65); position: relative; top: -100px;'>
+		<h3 style="color:black; font-size:20px">以下哪一个用大学造的句子是对的？Which sentence is correct using 大学？</h3>
+		<p>选择一个答案 Choose 1 answer</p>
+		<hr />
+	  
+		<div id='block-21' style='padding: 10px;'>
+		  <label for='option-21' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='6/24' id='option-21' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			我叫大学</label>
+		  <span id='result-21'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-22' style='padding: 10px;'>
+		  <label for='option-22' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='6' id='option-22' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			我的名字是大学</label>
+		  <span id='result-22'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-23' style='padding: 10px;'>
+		  <label for='option-23' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='1/3' id='option-23' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			我的爷爷是大学</label>
+		  <span id='result-23'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-24' style='padding: 10px;'>
+		  <label for='option-24' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='我上大学' id='option-24' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			我上大学</label>
+		  <span id='result-24'></span>
+		</div>
+		<hr />
+		<button type='button' onclick='displayAnswer2()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+	  </div>
+	  <a id='showanswer2'></a>
+	  <script>
+		//    The function evaluates the answer and displays result
+		function displayAnswer2() {
+		  if (document.getElementById('option-21').checked) {
+			document.getElementById('block-21').style.border = '3px solid red'
+			document.getElementById('result-21').style.color = 'red'
+			document.getElementById('result-21').innerHTML = 'Incorrect!'
+			showCorrectAnswer2()
+		}
+		  if (document.getElementById('option-22').checked) {
+			document.getElementById('block-22').style.border = '3px solid red'
+			document.getElementById('result-22').style.color = 'red'
+			document.getElementById('result-22').innerHTML = 'Incorrect!'
+			showCorrectAnswer2()
+		  }
+		  if (document.getElementById('option-23').checked) {
+			document.getElementById('block-23').style.border = '3px solid red'
+			document.getElementById('result-23').style.color = 'red'
+			document.getElementById('result-23').innerHTML = 'Incorrect!'
+			showCorrectAnswer2()
+		  }
+		  if (document.getElementById('option-24').checked) {
+			document.getElementById('block-24').style.border = '3px solid limegreen'
+			document.getElementById('result-24').style.color = 'limegreen'
+			document.getElementById('result-24').innerHTML = 'Correct!'
+		  }
+		}
+		// the functon displays the link to the correct answer
+		function showCorrectAnswer2() {
+		  let showAnswer2 = document.createElement('p')
+		  showAnswer2.innerHTML = 'Show Correct Answer'
+		  showAnswer2.style.position = 'relative'
+		  showAnswer2.style.top = '-180px'
+		  showAnswer2.style.fontSize = '0.75rem'
+		  document.getElementById('showanswer2').appendChild(showAnswer2)
+		  showAnswer2.addEventListener('click', () => {
+			document.getElementById('block-24').style.border = '3px solid limegreen'
+			document.getElementById('result-24').style.color = 'limegreen'
+			document.getElementById('result-24').innerHTML = 'Correct!'
+			document.getElementById('showanswer2').removeChild(showAnswer2)
+		  })
+		}
+	  </script>
+
+	<!--Question 3-->
+    <div style='transform: scale(0.65); position: relative; top: -100px;'>
+		<h3 style="color:black; font-size:20px">认识一个新朋友是什么感觉？What is the feeling of 认识</h3>
+		<p>选择一个答案 Choose 1 answer</p>
+		<hr />
+	  
+		<div id='block-31' style='padding: 10px;'>
+		  <label for='option-31' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='6/24' id='option-31' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			高兴</label>
+		  <span id='result-31'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-32' style='padding: 10px;'>
+		  <label for='option-32' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='6' id='option-32' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			伤心</label>
+		  <span id='result-32'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-33' style='padding: 10px;'>
+		  <label for='option-33' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='1/3' id='option-33' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			难过</label>
+		  <span id='result-33'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-34' style='padding: 10px;'>
+		  <label for='option-34' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' id='option-34' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			愤怒</label>
+		  <span id='result-34'></span>
+		</div>
+		<hr />
+		<button type='button' onclick='displayAnswer3()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+	  </div>
+	  <a id='showanswer3'></a>
+	  <script>
+		//    The function evaluates the answer and displays result
+		function displayAnswer3() {
+		  if (document.getElementById('option-31').checked) {
+			document.getElementById('block-31').style.border = '3px solid limegreen'
+			document.getElementById('result-31').style.color = 'limegreen'
+			document.getElementById('result-31').innerHTML = 'Correct!'
+		}
+		  if (document.getElementById('option-32').checked) {
+			document.getElementById('block-32').style.border = '3px solid red'
+			document.getElementById('result-32').style.color = 'red'
+			document.getElementById('result-32').innerHTML = 'Incorrect!'
+			showCorrectAnswer3()
+		  }
+		  if (document.getElementById('option-33').checked) {
+			document.getElementById('block-33').style.border = '3px solid red'
+			document.getElementById('result-33').style.color = 'red'
+			document.getElementById('result-33').innerHTML = 'Incorrect!'
+			showCorrectAnswer3()
+		  }
+		  if (document.getElementById('option-34').checked) {
+			document.getElementById('block-34').style.border = '3px solid red'
+			document.getElementById('result-34').style.color = 'red'
+			document.getElementById('result-34').innerHTML = 'Incorrect!'
+			showCorrectAnswer3()
+		  }
+		}
+		// the functon displays the link to the correct answer
+		function showCorrectAnswer3() {
+		  let showAnswer3 = document.createElement('p')
+		  showAnswer3.innerHTML = 'Show Correct Answer'
+		  showAnswer3.style.position = 'relative'
+		  showAnswer3.style.top = '-180px'
+		  showAnswer3.style.fontSize = '0.75rem'
+		  document.getElementById('showanswer3').appendChild(showAnswer3)
+		  showAnswer3.addEventListener('click', () => {
+			document.getElementById('block-31').style.border = '3px solid limegreen'
+			document.getElementById('result-31').style.color = 'limegreen'
+			document.getElementById('result-31').innerHTML = 'Correct!'
+			document.getElementById('showanswer3').removeChild(showAnswer3)
+		  })
+		}
+	  </script>
+
+	  <!--Question 4-->
+	  <div style='transform: scale(0.65); position: relative; top: -100px;'>
+		<h3 style="color:black; font-size:20px">What is Chinese in Chinese?</h3>
+		<p>选择一个答案 Choose 1 answer</p>
+		<hr />
+	  
+		<div id='block-41' style='padding: 10px;'>
+		  <label for='option-41' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='6/24' id='option-41' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			英语</label>
+		  <span id='result-41'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-42' style='padding: 10px;'>
+		  <label for='option-42' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='6' id='option-42' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			汉语</label>
+		  <span id='result-42'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-43' style='padding: 10px;'>
+		  <label for='option-43' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='1/3' id='option-43' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			日语</label>
+		  <span id='result-43'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-44' style='padding: 10px;'>
+		  <label for='option-44' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' id='option-44' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			韩语</label>
+		  <span id='result-44'></span>
+		</div>
+		<hr />
+		<button type='button' onclick='displayAnswer4()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+	  </div>
+	  <a id='showanswer4'></a>
+	  <script>
+		//    The function evaluates the answer and displays result
+		function displayAnswer4() {
+		  if (document.getElementById('option-41').checked) {
+			document.getElementById('block-41').style.border = '3px solid red'
+			document.getElementById('result-41').style.color = 'red'
+			document.getElementById('result-41').innerHTML = 'Incorrect!'
+			showCorrectAnswer4()
+		}
+		  if (document.getElementById('option-42').checked) {
+			document.getElementById('block-42').style.border = '3px solid limegreen'
+			document.getElementById('result-42').style.color = 'limegreen'
+			document.getElementById('result-42').innerHTML = 'Correct!'
+		  }
+		  if (document.getElementById('option-43').checked) {
+			document.getElementById('block-43').style.border = '3px solid red'
+			document.getElementById('result-43').style.color = 'red'
+			document.getElementById('result-43').innerHTML = 'Incorrect!'
+			showCorrectAnswer4()
+		  }
+		  if (document.getElementById('option-44').checked) {
+			document.getElementById('block-44').style.border = '3px solid red'
+			document.getElementById('result-44').style.color = 'red'
+			document.getElementById('result-44').innerHTML = 'Incorrect!'
+			showCorrectAnswer4()
+		  }
+		}
+		// the functon displays the link to the correct answer
+		function showCorrectAnswer4() {
+		  let showAnswer4 = document.createElement('p')
+		  showAnswer4.innerHTML = 'Show Correct Answer'
+		  showAnswer4.style.position = 'relative'
+		  showAnswer4.style.top = '-180px'
+		  showAnswer4.style.fontSize = '0.75rem'
+		  document.getElementById('showanswer4').appendChild(showAnswer4)
+		  showAnswer4.addEventListener('click', () => {
+			document.getElementById('block-42').style.border = '3px solid limegreen'
+			document.getElementById('result-42').style.color = 'limegreen'
+			document.getElementById('result-42').innerHTML = 'Correct!'
+			document.getElementById('showanswer4').removeChild(showAnswer4)
+		  })
+		}
+	  </script>
+
+	  <!--Question 5-->
+	  <div style='transform: scale(0.65); position: relative; top: -100px;'>
+		<h3 style="color:black; font-size:20px">麦克是什么学生？</h3>
+		<p>选择一个答案 Choose 1 answer</p>
+		<hr />
+	  
+		<div id='block-51' style='padding: 10px;'>
+		  <label for='option-51' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='6/24' id='option-51' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			留学生</label>
+		  <span id='result-51'></span>
+		</div>
+		<hr />
+	  
+		<div id='block-52' style='padding: 10px;'>
+		  <label for='option-52' style=' padding: 5px; font-size: 1.5rem;'>
+			<input type='radio' name='option' value='6' id='option-52' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+			本地生</label>
+		  <span id='result-52'></span>
+		</div>
+		<hr />
+		<button type='button' onclick='displayAnswer5()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+	  </div>
+	  <a id='showanswer5'></a>
+	  <script>
+		//    The function evaluates the answer and displays result
+		function displayAnswer5() {
+		  if (document.getElementById('option-51').checked) {
+			document.getElementById('block-51').style.border = '3px solid limegreen'
+			document.getElementById('result-51').style.color = 'limegreen'
+			document.getElementById('result-51').innerHTML = 'Correct!'
+		}
+		  if (document.getElementById('option-52').checked) {
+			document.getElementById('block-52').style.border = '3px solid red'
+			document.getElementById('result-52').style.color = 'red'
+			document.getElementById('result-52').innerHTML = 'Incorrect!'
+			showCorrectAnswer5()
+		  }
+		}
+		// the functon displays the link to the correct answer
+		function showCorrectAnswer5() {
+		  let showAnswer5 = document.createElement('p')
+		  showAnswer5.innerHTML = 'Show Correct Answer'
+		  showAnswer5.style.position = 'relative'
+		  showAnswer5.style.top = '-160px'
+		  showAnswer5.style.fontSize = '0.75rem'
+		  document.getElementById('showanswer5').appendChild(showAnswer5)
+		  showAnswer5.addEventListener('click', () => {
+			document.getElementById('block-51').style.border = '3px solid limegreen'
+			document.getElementById('result-51').style.color = 'limegreen'
+			document.getElementById('result-51').innerHTML = 'Correct!'
+			document.getElementById('showanswer5').removeChild(showAnswer5)
+		  })
+		}
+	  </script>
+</form>
+</body>
+</html>

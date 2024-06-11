@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=" utf-8">
+    <title>生活——门</title>
+    <style type="text/css">
+        .header {
+            width: 500px height:100px;
+            backdround: pink;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+        .box img{
+            width:500px;
+            height:310px;
+            border-radius:5%;
+            float:left;
+        }
+        .span  {
+            float: left;
+            line-height: 40px;
+            font-size:25px;
+            text-indent: 10px;
+        }
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #d7a2d1;
+            border: none;
+            color: #ffffff;
+            text-align: center;
+            font-size: 20px;
+            padding: 20px;
+            width: 120px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+                .button span:after {
+                    content: '»';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    left: -20px;
+                    transition: 0.5s;
+                }
+
+            .button:hover span {
+                padding-left: 25px;
+            }
+
+                .button:hover span:after {
+                    opacity: 1;
+                    left: 0;
+                }
+    </style>
+</head>
+<body>
+    <!--navigationBar-->
+	<div style="background-color: floralwhiteh;text-align: center;">
+        <li style="display: inline-block;font-family: 微软雅黑;width: 350px;height: 40px;background-color: palegreen;border-radius: 5px;line-height: 45px;text-indent: 5px;color: seagreen;border: none;font-size: 20px;font-weight: 500;" ><a href="D:\源文件\首页.html" style="color: white;text-decoration: none;">首页</a></li>
+        <li style="display: inline-block;font-family: 微软雅黑;width: 350px;height: 40px;background-color: pink;border-radius: 5px;line-height: 45px;text-indent: 5px;color: pink;border: none;font-size: 20px;font-weight: 400;"><a href="D:\源文件\汉语\汉语.html" style="color: white;text-decoration: none;">汉语</a></li>
+        <li style="display: inline-block;font-family: 微软雅黑;width: 350px;height: 40px;background-color: skyblue;border-radius: 5px;line-height: 45px;text-indent: 5px;color: skyblue;border: none;font-size: 20px;font-weight: 400;"><a href="D:\源文件\课程\内容\课文.html" style="color: white;text-decoration: none;">课文</a></li>
+        <li style="display: inline-block;font-family: 微软雅黑;width: 350px;height: 40px;background-color: lightsalmon;border-radius: 5px;line-height: 45px;text-indent: 5px;color: orange;border: none;font-size: 20px;font-weight: 400;"><a href="D:\源文件\课程\习题\练习.html" style="color: white;text-decoration: none;">练习</a></li>
+        </div>
+        <hr style="color: white; width:0.625rem ;" />
+    
+    <div class="header">
+        <a href="http://www.like-chinese.com/card/">
+            <img src="http://www.like-chinese.com/uploadfile/2017/0605/20170605015830207.jpg" style=" width:100%" ;>
+        </a>
+    </div>
+    <button class="button" style="vertical-align:middle"><span><a href="D:\源文件\汉语\汉语.html">返回 </a></span></button>
+    <div class="box">
+        <img src="D:\源文件\汉语\img\门.jpeg" alt="door" >
+    </div>
+    <div class="span">
+        <h1>门</h1>
+        <p> 释义</p>
+        <p>(总成)：家具</p>
+        <p>例句: 请关上那扇门。</p>
+        <p>生词: 关 close</p>
+    </div>
+</html >
